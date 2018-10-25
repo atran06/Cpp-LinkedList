@@ -18,26 +18,33 @@ void populate(LinkedList<int>& list) {
      }
 }
 
+void print(LinkedList<int>& list) {
+     for(int i = 0; i < list.size(); i++) {
+          cout << list.get(i) << " ";
+     }
+     cout << endl;
+}
+
 int main() {
      LinkedList<int> list;
      populate(list);
 
-     list.print();
+     print(list);
      cout << endl;
 
      list.insert(55, 5);
 
-     list.print();
+     print(list);
      cout << endl;
 
      list.remove(5);
 
-     list.print();
+     print(list);
      cout << endl;
 
-     list.clear();
+     // list.clear();
 
-     list.print();
+     // print(list);
 
      return 0;
 }

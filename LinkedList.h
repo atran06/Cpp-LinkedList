@@ -44,13 +44,6 @@ class LinkedList {
                head = NULL;
                tail = NULL;
           }
-          void print() {
-               Node* current = this -> head;
-               while(current != NULL) {
-                    std::cout << current -> value << std::endl;
-                    current = current -> next;
-               }
-          }
           Node* getHead() {
                return this -> head;
           }
