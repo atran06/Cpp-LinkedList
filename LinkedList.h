@@ -1,3 +1,15 @@
+/***************************************************************************
+ * C++ LinkedList
+ *
+ * Filename: LinkedList.h
+ * Description: An implementation of a Singly LinkedList in C++ following
+ *              the same method structure as the Java one.
+ * Last Modified: 10-25-18
+ * Author: Arthur Tran
+ *
+ * https://arthurtran.com/
+ ***************************************************************************/
+
 #include <iostream>
 
 template<typename Type>

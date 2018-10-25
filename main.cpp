@@ -1,3 +1,12 @@
+/***************************************************************************
+ * Filename: main.cpp
+ * Description: Runs tests for the LinkedList class
+ * Last Modified: 10-25-18
+ * Author: Arthur Tran
+ *
+ * https://arthurtran.com/
+ ***************************************************************************/
+
 #include <iostream>
 #include "LinkedList.h"
 
