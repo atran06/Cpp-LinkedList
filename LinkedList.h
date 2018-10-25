@@ -81,7 +81,7 @@ class LinkedList {
           }
           Type remove(int index) {
                if(index < this -> numItems) {
-                    numItems--;
+                    this -> numItems--;
                     if(this -> head == this -> tail) { //list has one item
                          this -> head = NULL;
                          this -> tail = NULL;
@@ -119,6 +119,7 @@ class LinkedList {
                          previous -> next = toAdd;
                     }
                }
+               this -> numItems++;
           }
           int indexOf(Type toFind) {
                int index = 0;
