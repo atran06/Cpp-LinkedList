@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 template<typename Type>
 class LinkedList {
      struct Node {
@@ -37,7 +35,7 @@ class LinkedList {
           void print() {
                Node* current = this -> head;
                while(current != NULL) {
-                    cout << current -> value << endl;
+                    std::cout << current -> value << std::endl;
                     current = current -> next;
                }
           }
