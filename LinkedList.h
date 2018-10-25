@@ -43,6 +43,7 @@ class LinkedList {
                }
                head = NULL;
                tail = NULL;
+               numItems = 0;
           }
           Node* getHead() {
                return this -> head;

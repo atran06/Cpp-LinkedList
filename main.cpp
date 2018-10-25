@@ -42,9 +42,9 @@ int main() {
      print(list);
      cout << endl;
 
-     // list.clear();
+     list.clear();
 
-     // print(list);
+     print(list);
 
      return 0;
 }
