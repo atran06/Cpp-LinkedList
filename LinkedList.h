@@ -23,6 +23,19 @@ class LinkedList {
           Node* head;
           Node* tail;
           int numItems;
+          Node* getHead() {
+               return this -> head;
+          }
+          Node* getTail() {
+               return this -> tail;
+          }
+          Node* getNode(int index) {
+               Node* toReturn = this -> head;
+               for(int i = 0; i < index; i++) {
+                    toReturn = toReturn -> next;
+               }
+               return toReturn;
+          }
 
      public:
           LinkedList() : head(NULL), tail(NULL), numItems(0) {}
@@ -45,12 +58,6 @@ class LinkedList {
                tail = NULL;
                numItems = 0;
           }
-          Node* getHead() {
-               return this -> head;
-          }
-          Node* getTail() {
-               return this -> tail;
-          }
           int size() {
                return this -> numItems;
           }
@@ -60,13 +67,6 @@ class LinkedList {
                     toReturn = toReturn -> next;
                }
                return toReturn -> value;
-          }
-          Node* getNode(int index) {
-               Node* toReturn = this -> head;
-               for(int i = 0; i < index; i++) {
-                    toReturn = toReturn -> next;
-               }
-               return toReturn;
           }
           void append(Type toAppend) {
                if(this -> head == NULL) { //list empty
