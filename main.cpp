@@ -32,6 +32,11 @@ int main() {
      print(list);
      cout << endl;
 
+     list.prepend(5);
+
+     print(list);
+     cout << endl;
+
      list.insert(55, 5);
 
      print(list);

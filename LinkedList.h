@@ -8,6 +8,7 @@
  * Author: Arthur Tran
  *
  * https://arthurtran.com/
+ * https://github.com/atran06/Cpp-LinkedList
  ***************************************************************************/
 
 #include <iostream>
@@ -77,6 +78,19 @@ class LinkedList {
                     this -> tail -> next = new Node();
                     this -> tail = this -> tail -> next;
                     this -> tail -> value = toAppend;
+               }
+               numItems++;
+          }
+          void prepend(Type toPrepend) {
+               Node* toAdd = new Node();
+               toAdd -> value = toPrepend;
+
+               if(this -> head == NULL) { //list empty
+                    this -> head = toAdd;
+                    this -> tail = toAdd;
+               } else {
+                    toAdd -> next = this -> head;
+                    this -> head = toAdd;
                }
                numItems++;
           }
