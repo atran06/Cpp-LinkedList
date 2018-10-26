@@ -119,7 +119,7 @@ class LinkedList {
                          return toRemoveValue;
                     }
                }
-               return -1;
+               return NULL;
           }
           void insert(Type value, int index) {
                Node* toAdd = new Node();
