@@ -32,7 +32,8 @@ int main() {
      print(list);
      cout << endl;
 
-     list.prepend(5);
+     // list.prepend(5);
+     list.append(110);
 
      print(list);
      cout << endl;

@@ -70,14 +70,15 @@ class LinkedList {
                return toReturn -> value;
           }
           void append(Type toAppend) {
+               Node* toAdd = new Node();
+               toAdd -> value = toAppend;
+
                if(this -> head == NULL) { //list empty
-                    this -> head = new Node();
-                    this -> head -> value = toAppend;
+                    this -> head = toAdd;
                     this -> tail = this -> head;
                } else {
-                    this -> tail -> next = new Node();
-                    this -> tail = this -> tail -> next;
-                    this -> tail -> value = toAppend;
+                    this -> tail -> next = toAdd;
+                    this -> tail = toAdd;
                }
                numItems++;
           }
