@@ -11,6 +11,8 @@
  * https://github.com/atran06/Cpp-LinkedList
  ***************************************************************************/
 
+#pragma once
+
 #include <iostream>
 
 template<typename Type>
