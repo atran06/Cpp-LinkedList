@@ -23,16 +23,20 @@ class LinkedList {
      };
 
      private:
-          Node* head;
-          Node* tail;
-          int numItems;
+          Node* head; //the first Node in the list
+          Node* tail; //the last Node in the list
+          int numItems; //keeps track of how many Nodes are in the list
+
+          /*
+           * Getters
+           */
           Node* getHead() {
                return this -> head;
           }
           Node* getTail() {
                return this -> tail;
           }
-          Node* getNode(int index) {
+          Node* getNode(int index) { //returns the Node at specified index
                Node* toReturn = this -> head;
                for(int i = 0; i < index; i++) {
                     toReturn = toReturn -> next;
@@ -41,7 +45,11 @@ class LinkedList {
           }
 
      public:
+          /*
+           * Constructor and Destructor
+           */
           LinkedList() : head(NULL), tail(NULL), numItems(0) {}
+
           ~LinkedList() {
                Node* current = this -> head;
                while(current != NULL) {
@@ -50,6 +58,13 @@ class LinkedList {
                     current = temp;
                }
           }
+
+          /*
+           * Function: clear()
+           * Desc: Goes through every node in the list and deletes it.
+           * Params: none
+           * Returns: void
+           */
           void clear() {
                Node* current = this -> head;
                while(current != NULL) {
@@ -61,9 +76,24 @@ class LinkedList {
                tail = NULL;
                numItems = 0;
           }
+
+          /*
+           * Function: size()
+           * Desc: Returns the size of the list.
+           * Params: none
+           * Returns: Returns numItems
+           */
           int size() {
                return this -> numItems;
           }
+
+          /*
+           * Function: get()
+           * Desc: Gets the Node's value at specified index
+           * Params:
+          *    index - The index to obtain the value from
+           * Returns: Returns the Node's value variable
+           */
           Type get(int index) {
                Node* toReturn = this -> head;
                for(int i = 0; i < index; i++) {
@@ -71,6 +101,15 @@ class LinkedList {
                }
                return toReturn -> value;
           }
+
+          /*
+           * Function: append()
+           * Desc: Creates a new Node with the specified Type as the value and adds it to the end
+           *       of the list.
+           * Params:
+           *   toAppend - The value to append to the list
+           * Returns: void
+           */
           void append(Type toAppend) {
                Node* toAdd = new Node();
                toAdd -> value = toAppend;
@@ -84,6 +123,15 @@ class LinkedList {
                }
                numItems++;
           }
+
+          /*
+           * Function: prepend()
+           * Desc: Creates a new Node with the specified Type as the value and adds it to the beginning
+           *       of the list.
+           * Params:
+           *   toPrepend - The value to prepend to the list
+           * Returns: void
+           */
           void prepend(Type toPrepend) {
                Node* toAdd = new Node();
                toAdd -> value = toPrepend;
@@ -97,8 +145,16 @@ class LinkedList {
                }
                numItems++;
           }
+
+          /*
+           * Function: toRemove()
+           * Desc: Removes a Node at the specified index from the list
+           * Params:
+           *   index - Index to remove
+           * Returns: Returns the Node's value that has just been removed or NULL if nothing was removed
+           */
           Type remove(int index) {
-               if(index < this -> numItems) {
+               if(index < this -> numItems) { //accounts for an empty list as well
                     this -> numItems--;
                     if(this -> head == this -> tail) { //list has one item
                          this -> head = NULL;
@@ -121,6 +177,16 @@ class LinkedList {
                }
                return NULL;
           }
+
+          /*
+           * Function: insert()
+           * Desc: Creates a new Node with the specified Type as the value and inserts it at the
+           *       specified index.
+           * Params:
+           *   value - The value to insert into the list
+           *   index - Index to insert to
+           * Returns: void
+           */
           void insert(Type value, int index) {
                Node* toAdd = new Node();
                toAdd -> value = value;
@@ -139,6 +205,14 @@ class LinkedList {
                }
                this -> numItems++;
           }
+
+          /*
+           * Function: indexOf()
+           * Desc: Gets the index of the specified Type in the list
+           * Params:
+           *   toFind - The Type to find
+           * Returns: Returns the index of the Type or -1 if not found
+           */
           int indexOf(Type toFind) {
                int index = 0;
                Node* current = this -> head;
