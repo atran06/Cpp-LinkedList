@@ -1,4 +1,7 @@
 # Cpp-LinkedList
+#### Disclaimer
+I'm fully aware that there is a Linked List implementation in the Standard Template Library but I thought it would be fun to write my own. Also the STL one is a Doubly Linked List so technically mine is different. :)
+<hr>
 
 | Method        | Description  |
 | ------------- |:------------------:|
